@@ -8,8 +8,11 @@
 }
 
 body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    /* background-color: #c9d6ff; */
+    background-image: url(../pexels-rafael-cosquiere-1059286-2041540.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,9 +48,13 @@ body{
     text-decoration: none;
     margin: 15px 0 10px;
 }
+.container a:hover{
+    text-decoration: underline;
+
+}
 
 .container button{
-    background-color: #512da8;
+    background-color: #4169E1;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -58,11 +65,36 @@ body{
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.container button span {
+    position: relative;
+    right: -5px;
+    transition: all 0.3s ease;
+}
+  .container button .change {
+    transition: all 0.3s ease;
+    right: 10px;
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  .container button i {
+    opacity: 0;
+    transform: translateX(20px);
+    transition:all 0.3s ease ;
+}
+.container button:hover{
+    background-color: #273BE2;
 }
 
 .container button.hidden{
+    transition:all 0.3s ease ;
     background-color: transparent;
     border-color: #fff;
+}
+.container button.hidden:hover{
+    background-color: white;
+    color: #4169E1;
 }
 
 .container form{
@@ -74,7 +106,22 @@ body{
     padding: 0 40px;
     height: 100%;
 }
-
+.container .password-container{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+.container .password-container i{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    right: 12.5px;
+    top: 17.5px;
+    cursor: pointer;
+}
+.container .password-container .show{
+   display: block;
+}
 .container input{
     background-color: #eee;
     border: none;
@@ -161,9 +208,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #4169E1;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #4169E1, #4169E1);
     color: #fff;
     position: relative;
     left: -100%;
